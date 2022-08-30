@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>상세페이지</h2>
+  <form action="modify" method="post">
+    <table>
+     <tbody>
+        <tr>
+        <td>이름</td>
+        <td>
+        <input type="text" name="accname" th:value="${account.accname}" />
+        </td>
+        </tr>
+        <tr>
+        <td>은행명</td>
+        <td>
+        <input type="text" name="bankname" th:value="${account.bankname}" />
+        </td>
+       </tr>
+       <tr>
+         <td colspan="2">
+          <div style="text-align:center;">
+          <input type="submit" value="수정하기" />
+          </div>
+         </td>
+       </tr>
+     </tbody>
+    </table>
+    </form>
+    <a href="list"></a>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+ <h2>어카운트리스트</h2>
+   <table>
+     <thead>
+       <tr>
+         <th>번호</th>
+         <th>이름</th>
+         <th>은행명</th>
+       </tr>
+      <tbody>
+       <tr th:each="bank : ${lists}">
+         <td th:text="${bank.id}">
+         <td>
+        <a th:href="@{/detail/{id}(id=${bank.id})}" th:text="${bank.accname}"></a>
+         </td>
+         <td th:text="${bank.bankname}"></td>
+       </tr>
+      </tbody>
+     </thead>
+   
+   </table>
+</body>
+</html>
